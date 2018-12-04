@@ -1,0 +1,22 @@
+@media screen and (max-width: 768px) {
+  .album-popup {
+    width: 100%;
+  }  
+}
+
+@media screen and (max-width: 480px) {
+  .logout-btn {
+    top: 0;
+    right: 0;
+  }
+  .albumitem__img {
+    height: 240px;
+  }
+  .gallery {
+    border-radius: 30px;
+    margin: 10px 0;
+  }
+  .gallery_list {
+    margin-top: 0;
+  }
+}
