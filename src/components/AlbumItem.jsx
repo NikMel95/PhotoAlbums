@@ -33,8 +33,10 @@ class Album extends Component {
     var item_info = this.props;
     var style_img = {
       backgroundImage: 'url(' + item_info.img + ')',
-      backgroundSize: 'cover',
-      backgroundPosition: 'center'
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: 'contain',
+      backgroundPosition: 'center',
+
     };
 
     return (
