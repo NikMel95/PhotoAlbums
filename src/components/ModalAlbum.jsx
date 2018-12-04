@@ -70,7 +70,15 @@ class ModalAlbum extends Component {
       <div className="">
         <Modal
           open={this.state.show}
+          classNames={{
+            modal: 'modal-popup'
+          }}
           onClose={this.onCloseModal.bind(this)}
+          styles={{
+            modal: {
+              padding: '20px 10px',
+            }
+          }}
         >
           <div className="album-popup">
             {this.state.load && <div className="modal-load"><div></div></div>}

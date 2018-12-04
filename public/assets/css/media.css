@@ -2,6 +2,9 @@
   .album-popup {
     width: 100%;
   }  
+  .modal-popup {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 480px) {
