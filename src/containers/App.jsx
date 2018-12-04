@@ -16,8 +16,8 @@ class App extends Component {
         window.gapi.client.init({
             apiKey: 'AIzaSyBMYF26vqrAKxGaOA50VAR9sPiwYFnri6I',
             discoveryDocs: ['https://people.googleapis.com/$discovery/rest?version=v1', 'https://photoslibrary.googleapis.com/$discovery/rest?version=v1'],
-            //clientId: '849228621087-n8uq3fvkussgc0qa3nna24h0bpten5tu.apps.googleusercontent.com',
-            clientId: '849228621087-9f8sd97emarlrien39paj2av4oskte8l.apps.googleusercontent.com',
+            clientId: '849228621087-n8uq3fvkussgc0qa3nna24h0bpten5tu.apps.googleusercontent.com',
+            //clientId: '849228621087-9f8sd97emarlrien39paj2av4oskte8l.apps.googleusercontent.com',
             scope: 'profile email https://www.googleapis.com/auth/photoslibrary https://www.googleapis.com/auth/photoslibrary.readonly',
             response_type: 'id_token permission'
         }).then(() => {
