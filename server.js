@@ -3,7 +3,7 @@ const path = require('path');
 const bodyParser = require('body-parser');
 
 const app = express();
-const port = 8080;
+const port = 5000;
 const clientDir = '';
 
 app.use(bodyParser.json());
