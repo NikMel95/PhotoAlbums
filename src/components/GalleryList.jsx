@@ -24,11 +24,13 @@ class GalleryList extends Component {
   handleScroll (event) {
     var top = document.documentElement.scrollTop;
     var el = document.querySelector('.gallery-content__list');
-    if(top + window.innerHeight >= el.offsetTop + el.offsetHeight && !this.state.load && this.state.stop) {
-      this.setState({
-        load: true
-      });
-      this.getAlbums();
+    if(this.state.stop) {
+      if(top + window.innerHeight >= el.offsetTop + el.offsetHeight && !this.state.load) {
+        this.setState({
+          load: true
+        });
+        this.getAlbums();
+      }
     }
   }
 

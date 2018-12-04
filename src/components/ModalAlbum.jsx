@@ -28,10 +28,12 @@ class ModalAlbum extends Component {
         'albumId': this.props.id
       } 
     }).then((response) => {
-      this.setState({
-        media: this.state.media.concat(response.result.mediaItems),
-        nextPageToken: response.result.nextPageToken ? response.result.nextPageToken : ''
-      });
+      if(response.result.mediaItems) {
+        this.setState({
+          media: this.state.media.concat(response.result.mediaItems),
+          nextPageToken: response.result.nextPageToken ? response.result.nextPageToken : ''
+        });
+      }
       if(first) {
         this.setState({
           show: true,
@@ -75,9 +77,9 @@ class ModalAlbum extends Component {
             <div className="album-popup__title">
               {this.props.title}
             </div>
-            <div className="album-popup__countitem">{this.props.count} - <i className="far fa-images"></i></div>
+            <div className="album-popup__countitem">{this.props.count ? this.props.count : 0} - <i className="far fa-images"></i></div>
             <div className="album-popup__medialist">
-              {
+              { 
                 media.map(d => 
                   <MediaItem 
                     key={d.id}
